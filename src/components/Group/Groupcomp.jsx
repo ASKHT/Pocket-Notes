@@ -8,7 +8,6 @@ const Groupcomp = () => {
       <h1 className="h1tagofGroupcomp" style={{ marginTop: "35px" }}>
         Pocket Notes
       </h1>
-      <br />
       <Group />
       <div className="circlebutton">+</div>
     </div>

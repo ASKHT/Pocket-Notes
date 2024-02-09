@@ -10,7 +10,7 @@
   box-sizing: border-box;
   align-items: center;
   text-align: center;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 .innerelement {
   display: flex;
