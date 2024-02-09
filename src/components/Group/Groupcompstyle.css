@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.leftcontainer {
+  width: 25%;
+  background-color: white;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.h1tagofGroupcomp {
+  font-family: Roboto;
+}
+.circlebutton {
+  position: sticky;
+  display: flex;
+  background-color: #16008b;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  left: 18rem;
+  bottom: 5%;
+}
