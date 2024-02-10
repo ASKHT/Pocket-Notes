@@ -77,7 +77,14 @@
   cursor: pointer;
   background-color: black;
 }
-
+.popup__color__input__color__1:hover,
+.popup__color__input__color__2:hover,
+.popup__color__input__color__3:hover,
+.popup__color__input__color__4:hover,
+.popup__color__input__color__5:hover,
+.popup__color__input__color__6:hover {
+  outline: 2px solid black;
+}
 .popup__color__input__color__1 {
   background-color: #b38bfa;
 }

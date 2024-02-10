@@ -5,10 +5,12 @@
   overflow-y: scroll;
   height: 80%;
   justify-content: center;
+  padding-top: 4rem;
 }
 
 .left {
   display: flex;
+  gap: 1rem;
   flex-direction: column;
 }
 
