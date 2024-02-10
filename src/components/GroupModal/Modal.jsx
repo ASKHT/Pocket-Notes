@@ -1,6 +1,7 @@
 import React from "react";
 import "./Modal.css";
-const Modal = () => {
+import { useState } from "react";
+const Modal = ({ close }) => {
   return (
     <div className="popup">
       <div className="popup__title">Create New Group</div>
@@ -19,7 +20,9 @@ const Modal = () => {
           <div className="popup__color__input__color__6"></div>
         </div>
       </div>
-      <div className="popup__closeicon">&#10006;</div>
+      <div className="popup__closeicon" onClick={close}>
+        &#10006;
+      </div>
       <div className="popup__close">
         <button>Create</button>
       </div>
