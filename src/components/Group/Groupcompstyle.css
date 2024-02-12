@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 .leftcontainer {
-  width: 25%;
+  width: 100%;
   background-color: white;
   height: 100vh;
   align-items: center;
@@ -27,4 +27,10 @@
   left: 18rem;
   bottom: 5%;
   cursor: pointer;
+}
+@media only screen and (min-width: 700px) {
+  .leftcontainer {
+    width: 25%;
+    max-width: 300px;
+  }
 }

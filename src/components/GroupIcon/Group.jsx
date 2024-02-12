@@ -2,7 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import "./Groupstyle.css";
 import UserContext from "../context/Usercontext";
 const Group = () => {
-  const { user, bgcolor } = useContext(UserContext);
+  const { setCurrentGroup } = useContext(UserContext);
+  const [active, Setactive] = useState("");
 
   const extractusernamelogo = (name) => {
     let take = name.substring(0, 1); // Add the first character of the name
@@ -28,18 +29,28 @@ const Group = () => {
     }
     return take;
   };
+  const handleclick = (e, group) => {
+    Setactive(group.name);
+    setCurrentGroup(allGroup.find((item) => item.name === group.name));
+    // console.log(currentgroup);
+  };
 
-  // Retrieve groups data from local storage
   const allGroup = JSON.parse(localStorage.getItem("groups"));
 
   return (
-    <div class="container1">
-      <div class="left">
+    <div className="container1">
+      <div className="left">
         {allGroup &&
           allGroup.map((group) => (
-            <div class="profile-container">
+            <div
+              key={group.name}
+              onClick={(e) => handleclick(e, group)}
+              className={`profile-container ${
+                group.name === active ? "group active" : "group"
+              }`}
+            >
               <div
-                class="profile-icon"
+                className="profile-icon"
                 style={{ backgroundColor: group.color }}
               >
                 <span>{extractusernamelogo(group.name)}</span>

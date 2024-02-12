@@ -1,13 +1,12 @@
-import { useState } from "react";
-import SecureBanner from "./components/SecureBanner/SecureBanner";
+// import SecureBanner from "./components/SecureBanner/SecureBanner";
 import Groupcomp from "./components/Group/Groupcomp";
 import Modal from "./components/GroupModal/Modal";
 import UserContextProvider from "./components/context/UserContextProvider";
+// import NotesSection from "./components/notessection/NotesSection";
+import Views from "./views/Views";
+import { useState } from "react";
 function App() {
   const [ismodalopen, setisemodalopen] = useState(false);
-
-  // Callback function to update parent state
-
   const open = () => {
     setisemodalopen(true);
   };
@@ -19,12 +18,9 @@ function App() {
     <UserContextProvider>
       <div className="maindiv" style={{ display: "flex" }}>
         <Groupcomp open={open} />
-        <SecureBanner />
+        <Views />
         {ismodalopen && (
-          <Modal
-            close={close}
-            setisemodalopensetisemodalopen={setisemodalopen}
-          />
+          <Modal close={close} setisemodalopen={setisemodalopen} />
         )}
       </div>
     </UserContextProvider>

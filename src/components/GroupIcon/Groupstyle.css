@@ -6,18 +6,24 @@
   height: 80%;
   justify-content: center;
   padding-top: 4rem;
+  scrollbar-width: none;
+  /* background-color: red; */
 }
 
 .left {
+  width: 95%;
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  /* background-color: red; */
 }
 
 .profile-container {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  cursor: pointer;
+  /* background-color: #2f2f2f; */
 }
 
 .profile-icon {
@@ -36,3 +42,19 @@
 .profile-container p {
   margin-left: 10px;
 }
+.group {
+  display: flex;
+  align-items: center;
+  /* gap: 20px; */
+  padding: 25px 50px; /* Increase the padding */
+  cursor: pointer;
+  height: 60px; /* Increase the height */
+  width: 100%; /* Increase the width */
+  border-radius: 20px; /* Add border radius */
+}
+
+.active {
+  background-color: #2f2f2f2b;
+}
+
+/* responsive design */

@@ -11,6 +11,10 @@
   align-items: center;
   text-align: center;
   overflow-y: hidden;
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 0;
 }
 .innerelement {
   display: flex;
@@ -38,4 +42,12 @@
 .ptagofsecurebanner {
   color: #292929;
   font-weight: 550;
+}
+
+/* responsive design */
+
+@media only screen and (min-width: 700px) {
+  .container {
+    display: block;
+  }
 }
