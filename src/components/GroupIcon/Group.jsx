@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import "./Groupstyle.css";
 import UserContext from "../context/Usercontext";
 const Group = () => {
-  const { setCurrentGroup } = useContext(UserContext);
+  const { setCurrentGroup, hiddennotes } = useContext(UserContext);
   const [active, Setactive] = useState("");
 
   const extractusernamelogo = (name) => {
@@ -30,6 +30,7 @@ const Group = () => {
     return take;
   };
   const handleclick = (e, group) => {
+    hiddennotes(false);
     Setactive(group.name);
     setCurrentGroup(allGroup.find((item) => item.name === group.name));
     // console.log(currentgroup);

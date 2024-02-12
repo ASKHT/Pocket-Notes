@@ -53,7 +53,7 @@ const NotesSection = () => {
   return (
     <div className="notes-section">
       <div className="notes-header">
-        <FaArrowLeft className="arrow" onClick={hiddennotes(true)} />
+        <FaArrowLeft className="arrow" onClick={() => hiddennotes(true)} />
         <div
           className="profile"
           style={{ backgroundColor: currentgroup.color }}
