@@ -15,8 +15,8 @@
   position: sticky;
   display: flex;
   background-color: #16008b;
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   text-align: center;
   color: white;
@@ -24,7 +24,7 @@
   font-weight: bold;
   align-items: center;
   justify-content: center;
-  left: 18rem;
+  left: 17rem;
   bottom: 5%;
   cursor: pointer;
 }
@@ -32,5 +32,11 @@
   .leftcontainer {
     width: 25%;
     max-width: 300px;
+  }
+  .circlebutton {
+    left: 13rem;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
   }
 }

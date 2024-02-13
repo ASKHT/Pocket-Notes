@@ -23,6 +23,19 @@ const NotesSection = () => {
 
     return take.toUpperCase();
   };
+
+  const extractusername = (name) => {
+    let take = name[0].toUpperCase();
+    for (let i = 1; i < name.length; i++) {
+      if (name[i - 1] === " ") {
+        take += name[i].toUpperCase();
+      } else {
+        take += name[i];
+      }
+    }
+    return take;
+  };
+
   const groups = JSON.parse(localStorage.getItem("groups"));
   let group = groups?.find((item) => item.name === currentgroup.name);
   const handleNotes = () => {
@@ -60,7 +73,7 @@ const NotesSection = () => {
         >
           {extractusernamelogo(currentgroup.name)}
         </div>
-        <div className="group-name">{currentgroup.name}</div>
+        <div className="group-name">{extractusername(currentgroup.name)}</div>
       </div>
       <div className="notes-body">
         {group &&
